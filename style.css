@@ -1,0 +1,375 @@
+/* =========================
+   General Styles
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #22223b;
+    background-color: #f8f7ff;
+    line-height: 1.6;
+}
+
+/* =========================
+   Navigation Bar
+========================= */
+
+.navbar {
+    width: 100%;
+    height: 70px;
+    padding: 0 8%;
+    background-color: #22223b;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: white;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 4px;
+
+    transition: color 0.3s ease,
+                border-bottom 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #c9b1ff;
+    border-bottom: 2px solid #c9b1ff;
+}
+
+/* =========================
+   Home
+========================= */
+
+.home-section {
+    min-height: 100vh;
+    padding: 100px 8% 50px;
+
+    display: flex;
+    align-items: center;
+
+    background: linear-gradient(
+        135deg,
+        #22223b,
+        #4a4e69
+    );
+}
+
+.home-content {
+    max-width: 700px;
+    color: white;
+}
+
+.welcome,
+.section-label {
+    color: #8e7dff;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.home-section .welcome {
+    color: #c9b1ff;
+}
+
+.home-content h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.home-content h1 span {
+    color: #c9b1ff;
+}
+
+.home-content p:not(.welcome) {
+    max-width: 600px;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.main-button {
+    display: inline-block;
+    padding: 12px 25px;
+
+    background-color: #8e7dff;
+    color: white;
+
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+
+    transition: transform 0.3s ease,
+                background-color 0.3s ease;
+}
+
+.main-button:hover {
+    background-color: #7564e8;
+    transform: translateY(-3px);
+}
+
+/* =========================
+   About
+========================= */
+
+.about-section {
+    min-height: 100vh;
+    padding: 110px 8% 70px;
+
+    display: flex;
+    align-items: center;
+}
+
+.about-card {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-text h2,
+.contact-info h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-text p:last-child {
+    max-width: 650px;
+    color: #555;
+}
+
+.about-box {
+    background-color: white;
+    padding: 40px 25px;
+    text-align: center;
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(34, 34, 59, 0.12);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.about-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(34, 34, 59, 0.18);
+}
+
+.about-box div {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.about-box h3 {
+    margin-bottom: 8px;
+}
+
+/* =========================
+   Contact
+========================= */
+
+.contact-section {
+    min-height: 100vh;
+    padding: 110px 8% 70px;
+
+    background-color: #eeebff;
+
+    display: flex;
+    align-items: center;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.contact-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.contact-info p:last-child {
+    color: #555;
+}
+
+.contact-form {
+    background-color: white;
+    padding: 35px;
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(34, 34, 59, 0.12);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.contact-form input {
+    padding: 13px;
+    margin-bottom: 18px;
+
+    border: 1px solid #ccc;
+    border-radius: 8px;
+
+    font-size: 1rem;
+    outline: none;
+
+    transition: border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.contact-form input:focus {
+    border-color: #8e7dff;
+    box-shadow: 0 0 0 3px rgba(142, 125, 255, 0.15);
+}
+
+.contact-form button {
+    padding: 13px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: #22223b;
+    color: white;
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #8e7dff;
+    transform: translateY(-2px);
+}
+
+#formMessage {
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+    padding: 20px;
+    background-color: #22223b;
+    color: white;
+    text-align: center;
+}
+
+/* =========================
+   Mobile Responsive Design
+========================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        height: auto;
+        min-height: 70px;
+        padding: 15px 5%;
+
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+
+    .home-section {
+        padding-top: 150px;
+    }
+
+    .about-card,
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .about-section,
+    .contact-section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .about-text h2,
+    .contact-info h2 {
+        font-size: 2rem;
+    }
+
+    .contact-form {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 0.8rem;
+    }
+
+    .home-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .home-content p {
+        font-size: 1rem;
+    }
+}
